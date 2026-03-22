@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar PmsKitPro - App Android</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0F766E 0%, #115E59 50%, #134E4A 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container { max-width: 480px; width: 100%; text-align: center; }
+    .logo {
+      width: 100px; height: 100px; background: white; border-radius: 24px;
+      margin: 0 auto 24px; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 900; color: #0F766E;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    h1 { color: white; font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 40px; }
+    .card {
+      background: white; border-radius: 20px; padding: 32px 24px;
+      margin-bottom: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+    .card h2 { font-size: 20px; color: #111; margin-bottom: 8px; }
+    .card p { color: #6B7280; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+    .download-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; border-radius: 12px; font-size: 16px; font-weight: 700;
+      text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none;
+    }
+    .download-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .btn-inbox { background: #0F766E; color: white; }
+    .btn-limpieza { background: #7C3AED; color: white; }
+    .btn-icon { font-size: 22px; }
+    .badge {
+      display: inline-block; background: #F3F4F6; color: #6B7280;
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-top: 12px;
+    }
+    .steps { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 32px; line-height: 2; }
+    .steps strong { color: white; }
+    .ios-note {
+      background: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px;
+      margin-top: 24px; color: rgba(255,255,255,0.8); font-size: 13px;
+    }
+    .ios-note strong { color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">PKP</div>
+    <h1>PmsKitPro</h1>
+    <p class="subtitle">Gestiona tus propiedades desde el movil</p>
+    <div class="card">
+      <h2>PmsKitPro Inbox</h2>
+      <p>Responde a tus huespedes de WhatsApp, Airbnb y Booking desde una sola app. Con IA integrada, traducciones y plantillas.</p>
+      <a href="https://github.com/adriangascasancho/pmskitpro-downloads/releases/download/v1.0.0/PmsKitPro.apk" class="download-btn btn-inbox">
+        <span class="btn-icon">📱</span> Descargar para Android
+      </a>
+      <div class="badge">Android 8.0+</div>
+    </div>
+    <div class="card">
+      <h2>PmsKitPro Limpieza</h2>
+      <p>App para tu equipo de limpieza. Servicios del dia, checklists con fotos, fichaje GPS y control de calidad con IA.</p>
+      <a href="https://github.com/adriangascasancho/pmskitpro-downloads/releases/download/v1.0.0-limpieza/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza">
+        <span class="btn-icon">🧹</span> Descargar para Android
+      </a>
+      <div class="badge">Android 8.0+</div>
+    </div>
+    <div class="steps">
+      <strong>Como instalar:</strong><br>
+      1. Pulsa "Descargar" en tu movil Android<br>
+      2. Abre el archivo descargado<br>
+      3. Acepta instalar desde fuentes desconocidas<br>
+      4. Inicia sesion con tu email
+    </div>
+    <div class="ios-note">
+      <strong>iPhone / iOS:</strong> Proximamente disponible en TestFlight y App Store.
+    </div>
+  </div>
+</body>
+</html>

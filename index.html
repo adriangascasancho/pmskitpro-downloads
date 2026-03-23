@@ -7,229 +7,278 @@
   <meta name="description" content="Descarga las apps de PmsKitPro para gestionar tus propiedades vacacionales desde el móvil. Inbox con IA, limpieza y más.">
   <meta property="og:title" content="PmsKitPro - Gestiona tus propiedades desde el móvil">
   <meta property="og:description" content="Responde a huéspedes de WhatsApp, Airbnb y Booking desde una sola app. Con IA integrada.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adriangascasancho.github.io/pmskitpro-downloads/">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #0F766E 0%, #115E59 50%, #134E4A 100%);
-      min-height: 100vh;
-      padding: 20px;
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #0F766E 0%, #115E59 50%, #134E4A 100%); min-height: 100vh; padding: 20px; }
     .page { max-width: 520px; margin: 0 auto; }
-
-    /* Hero banner for LinkedIn */
-    .hero {
-      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-      border-radius: 20px;
-      padding: 32px 24px;
-      margin-bottom: 20px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(16,185,129,0.15);
-      color: #10B981;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      color: white;
-      font-size: 26px;
-      font-weight: 800;
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
+    .lang-bar { text-align: center; margin-bottom: 16px; }
+    .lang-btn { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 4px; text-decoration: none; display: inline-block; }
+    .lang-btn.active { background: white; color: #0F766E; border-color: white; }
+    .hero { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 20px; padding: 32px 24px; margin-bottom: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .hero-badge { display: inline-block; background: rgba(16,185,129,0.15); color: #10B981; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase; }
+    .hero h1 { color: white; font-size: 26px; font-weight: 800; line-height: 1.3; margin-bottom: 12px; }
     .hero h1 span { color: #2DD4BF; }
-    .hero p {
-      color: rgba(255,255,255,0.7);
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-    .hero-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-    .hero-feat {
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.9);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 32px;
-      background: linear-gradient(135deg, #0D9488, #0F766E);
-      color: white;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.2s;
-      border: none;
-    }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
+    .hero-features { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px; }
+    .hero-feat { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: linear-gradient(135deg, #0D9488, #0F766E); color: white; border-radius: 12px; font-size: 16px; font-weight: 700; text-decoration: none; transition: transform 0.2s; border: none; }
     .hero-cta:hover { transform: translateY(-2px); }
-
-    /* Logo + title */
     .header { text-align: center; margin-bottom: 32px; }
-    .logo {
-      width: 80px; height: 80px; background: white; border-radius: 20px;
-      margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 900; color: #0F766E;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-    }
+    .logo { width: 80px; height: 80px; background: white; border-radius: 20px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: #0F766E; box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
     .header h2 { color: white; font-size: 24px; font-weight: 800; }
     .header-sub { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 4px; }
-
-    /* App cards */
-    .card {
-      background: white; border-radius: 20px; padding: 28px 24px;
-      margin-bottom: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-    }
+    .card { background: white; border-radius: 20px; padding: 28px 24px; margin-bottom: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
     .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .card-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px;
-    }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
     .card-icon-inbox { background: #D1FAE5; }
     .card-icon-clean { background: #EDE9FE; }
     .card h3 { font-size: 18px; color: #111; font-weight: 700; }
     .card-desc { color: #6B7280; font-size: 14px; margin-bottom: 4px; }
     .card p { color: #6B7280; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
-    .download-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 12px 28px; border-radius: 12px; font-size: 15px; font-weight: 700;
-      text-decoration: none; transition: transform 0.2s; border: none; width: 100%;
-      justify-content: center;
-    }
+    .download-btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 28px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; transition: transform 0.2s; border: none; width: 100%; justify-content: center; margin-bottom: 8px; }
     .download-btn:hover { transform: translateY(-2px); }
-    .btn-inbox { background: #0F766E; color: white; }
-    .btn-limpieza { background: #7C3AED; color: white; }
+    .btn-android { background: #0F766E; color: white; }
+    .btn-ios { background: #1E293B; color: white; }
+    .btn-limpieza-android { background: #7C3AED; color: white; }
+    .btn-limpieza-ios { background: #4C1D95; color: white; }
     .btn-icon { font-size: 20px; }
-    .platforms {
-      display: flex; gap: 6px; margin-top: 12px; justify-content: center;
-    }
-    .platform-badge {
-      display: inline-block; background: #F3F4F6; color: #6B7280;
-      padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 500;
-    }
-
-    /* Steps */
-    .steps {
-      color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 24px;
-      line-height: 2; text-align: center;
-    }
+    .platforms { display: flex; gap: 6px; margin-top: 8px; justify-content: center; }
+    .platform-badge { display: inline-block; background: #F3F4F6; color: #6B7280; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+    .steps { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 24px; line-height: 2; text-align: center; }
     .steps strong { color: white; }
-    .ios-note {
-      background: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px;
-      margin-top: 20px; color: rgba(255,255,255,0.8); font-size: 13px; text-align: center;
-    }
+    .ios-note { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; margin-top: 20px; color: rgba(255,255,255,0.8); font-size: 13px; text-align: center; }
     .ios-note strong { color: white; }
-    .footer {
-      text-align: center; margin-top: 32px; padding-bottom: 20px;
-      color: rgba(255,255,255,0.4); font-size: 12px;
-    }
+    .footer { text-align: center; margin-top: 32px; padding-bottom: 20px; color: rgba(255,255,255,0.4); font-size: 12px; }
     .footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+    .lang-bar [data-lang] { display: inline-block; }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- Hero banner for non-clients -->
-    <div class="hero">
-      <div class="hero-badge">🚀 Software para alojamientos turisticos</div>
-      <h1>Gestiona tus propiedades vacacionales con <span>Inteligencia Artificial</span></h1>
-      <p>Automatiza respuestas a huéspedes, gestiona reservas de múltiples plataformas, controla tu equipo de limpieza y maximiza tus ingresos.</p>
-      <div class="hero-features">
-        <span class="hero-feat">💬 WhatsApp + IA</span>
-        <span class="hero-feat">🏠 Airbnb</span>
-        <span class="hero-feat">🔵 Booking</span>
-        <span class="hero-feat">🧹 Limpieza</span>
-        <span class="hero-feat">📊 Dashboard</span>
-        <span class="hero-feat">🌍 Multi-idioma</span>
+    <!-- Language selector -->
+    <div class="lang-bar">
+      <a class="lang-btn active" onclick="setLang('es')" id="btn-es">🇪🇸 Español</a>
+      <a class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</a>
+      <a class="lang-btn" onclick="setLang('it')" id="btn-it">🇮🇹 Italiano</a>
+      <a class="lang-btn" onclick="setLang('pt')" id="btn-pt">🇧🇷 Português</a>
+    </div>
+
+    <!-- ==================== ESPAÑOL ==================== -->
+    <div data-lang="es" class="active">
+      <div class="hero">
+        <div class="hero-badge">🚀 Software para alojamientos turísticos</div>
+        <h1>Gestiona tus propiedades vacacionales con <span>Inteligencia Artificial</span></h1>
+        <p>Automatiza respuestas a huéspedes, gestiona reservas de múltiples plataformas, controla tu equipo de limpieza y maximiza tus ingresos.</p>
+        <div class="hero-features">
+          <span class="hero-feat">💬 WhatsApp + IA</span>
+          <span class="hero-feat">🏠 Airbnb</span>
+          <span class="hero-feat">🔵 Booking</span>
+          <span class="hero-feat">🧹 Limpieza</span>
+          <span class="hero-feat">📊 Dashboard</span>
+          <span class="hero-feat">🌍 Multi-idioma</span>
+        </div>
+        <a href="https://pmskitpro.com" class="hero-cta">Descubre PmsKitPro →</a>
       </div>
-      <a href="https://pmskitpro.com" class="hero-cta">
-        Descubre PmsKitPro →
-      </a>
-    </div>
-
-    <!-- Download section -->
-    <div class="header">
-      <div class="logo">PKP</div>
-      <h2>Descarga las Apps</h2>
-      <p class="header-sub">Para clientes con cuenta activa</p>
-    </div>
-
-    <!-- Inbox App -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon card-icon-inbox">📱</div>
-        <div>
-          <h3>PmsKitPro Inbox</h3>
-          <span class="card-desc">Mensajería unificada</span>
+      <div class="header">
+        <div class="logo">PKP</div>
+        <h2>Descarga las Apps</h2>
+        <p class="header-sub">Para clientes con cuenta activa</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-inbox">📱</div>
+          <div><h3>PmsKitPro Inbox</h3><span class="card-desc">Mensajería unificada</span></div>
+        </div>
+        <p>Responde a tus huéspedes de WhatsApp, Airbnb y Booking desde una sola app. Con IA, traducciones automáticas y plantillas.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro.apk" class="download-btn btn-android"><span class="btn-icon">🤖</span> Descargar Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx/builds/a312f28f-a4c3-4fd6-b5f9-5dd95b60d95e" class="download-btn btn-ios"><span class="btn-icon">🍎</span> Descargar iPhone (Beta)</a>
+        <div class="platforms">
+          <span class="platform-badge">Android 8.0+</span>
+          <span class="platform-badge">iOS 15+</span>
         </div>
       </div>
-      <p>Responde a tus huéspedes de WhatsApp, Airbnb y Booking desde una sola app. Con IA, traducciones automáticas y plantillas.</p>
-      <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro.apk" class="download-btn btn-inbox">
-        <span class="btn-icon">⬇️</span> Descargar para Android
-      </a>
-      <div class="platforms">
-        <span class="platform-badge">Android 8.0+</span>
-        <span class="platform-badge">🍎 iOS próximamente</span>
-      </div>
-    </div>
-
-    <!-- Cleaner App -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon card-icon-clean">🧹</div>
-        <div>
-          <h3>PmsKitPro Limpieza</h3>
-          <span class="card-desc">Gestión de equipo</span>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-clean">🧹</div>
+          <div><h3>PmsKitPro Limpieza</h3><span class="card-desc">Gestión de equipo</span></div>
+        </div>
+        <p>App para tu equipo de limpieza. Servicios del día, checklists con fotos, fichaje GPS y control de calidad con IA.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza-android"><span class="btn-icon">🤖</span> Descargar Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx-cleaner/builds/9b8c3ad6-38a7-4ee7-a8a2-d0b9c9ffa2d0" class="download-btn btn-limpieza-ios"><span class="btn-icon">🍎</span> Descargar iPhone (Beta)</a>
+        <div class="platforms">
+          <span class="platform-badge">Android 8.0+</span>
+          <span class="platform-badge">iOS 15+</span>
         </div>
       </div>
-      <p>App para tu equipo de limpieza. Servicios del día, checklists con fotos por sección, fichaje GPS y control de calidad con IA.</p>
-      <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza">
-        <span class="btn-icon">⬇️</span> Descargar para Android
-      </a>
-      <div class="platforms">
-        <span class="platform-badge">Android 8.0+</span>
-        <span class="platform-badge">🍎 iOS próximamente</span>
+      <div class="steps">
+        <strong>📱 Android:</strong> Descarga → Abre → Acepta instalar → Login<br>
+        <strong>🍎 iPhone:</strong> Abre el link → Instala el perfil → Activa Modo Desarrollador (Ajustes > Privacidad > Modo Desarrollador)
       </div>
+      <div class="footer">© 2026 PmsKitPro · <a href="https://pmskitpro.com">pmskitpro.com</a></div>
     </div>
 
-    <!-- Instructions -->
-    <div class="steps">
-      <strong>Cómo instalar:</strong><br>
-      1. Pulsa "Descargar" en tu móvil Android<br>
-      2. Abre el archivo descargado<br>
-      3. Acepta instalar desde fuentes desconocidas<br>
-      4. Inicia sesión con tu email de PmsKitPro
+    <!-- ==================== ENGLISH ==================== -->
+    <div data-lang="en">
+      <div class="hero">
+        <div class="hero-badge">🚀 Vacation rental software</div>
+        <h1>Manage your vacation properties with <span>Artificial Intelligence</span></h1>
+        <p>Automate guest responses, manage bookings from multiple platforms, control your cleaning team and maximize your revenue.</p>
+        <div class="hero-features">
+          <span class="hero-feat">💬 WhatsApp + AI</span>
+          <span class="hero-feat">🏠 Airbnb</span>
+          <span class="hero-feat">🔵 Booking</span>
+          <span class="hero-feat">🧹 Cleaning</span>
+          <span class="hero-feat">📊 Dashboard</span>
+          <span class="hero-feat">🌍 Multi-language</span>
+        </div>
+        <a href="https://pmskitpro.com" class="hero-cta">Discover PmsKitPro →</a>
+      </div>
+      <div class="header">
+        <div class="logo">PKP</div>
+        <h2>Download the Apps</h2>
+        <p class="header-sub">For clients with active accounts</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-inbox">📱</div>
+          <div><h3>PmsKitPro Inbox</h3><span class="card-desc">Unified messaging</span></div>
+        </div>
+        <p>Reply to your guests on WhatsApp, Airbnb and Booking from one app. With AI, automatic translations and templates.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro.apk" class="download-btn btn-android"><span class="btn-icon">🤖</span> Download Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx/builds/a312f28f-a4c3-4fd6-b5f9-5dd95b60d95e" class="download-btn btn-ios"><span class="btn-icon">🍎</span> Download iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-clean">🧹</div>
+          <div><h3>PmsKitPro Cleaning</h3><span class="card-desc">Team management</span></div>
+        </div>
+        <p>App for your cleaning team. Daily services, photo checklists, GPS clock-in and AI quality control.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza-android"><span class="btn-icon">🤖</span> Download Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx-cleaner/builds/9b8c3ad6-38a7-4ee7-a8a2-d0b9c9ffa2d0" class="download-btn btn-limpieza-ios"><span class="btn-icon">🍎</span> Download iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="steps">
+        <strong>📱 Android:</strong> Download → Open → Accept install → Login<br>
+        <strong>🍎 iPhone:</strong> Open link → Install profile → Enable Developer Mode (Settings > Privacy > Developer Mode)
+      </div>
+      <div class="footer">© 2026 PmsKitPro · <a href="https://pmskitpro.com">pmskitpro.com</a></div>
     </div>
 
-    <div class="ios-note">
-      <strong>📱 iPhone / iOS:</strong> Próximamente disponible en TestFlight y App Store.
+    <!-- ==================== ITALIANO ==================== -->
+    <div data-lang="it">
+      <div class="hero">
+        <div class="hero-badge">🚀 Software per affitti turistici</div>
+        <h1>Gestisci le tue proprietà vacanziere con <span>Intelligenza Artificiale</span></h1>
+        <p>Automatizza le risposte agli ospiti, gestisci prenotazioni da più piattaforme, controlla il team di pulizia e massimizza i ricavi.</p>
+        <div class="hero-features">
+          <span class="hero-feat">💬 WhatsApp + IA</span>
+          <span class="hero-feat">🏠 Airbnb</span>
+          <span class="hero-feat">🔵 Booking</span>
+          <span class="hero-feat">🧹 Pulizia</span>
+          <span class="hero-feat">📊 Dashboard</span>
+          <span class="hero-feat">🌍 Multi-lingua</span>
+        </div>
+        <a href="https://pmskitpro.com" class="hero-cta">Scopri PmsKitPro →</a>
+      </div>
+      <div class="header">
+        <div class="logo">PKP</div>
+        <h2>Scarica le App</h2>
+        <p class="header-sub">Per clienti con account attivo</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-inbox">📱</div>
+          <div><h3>PmsKitPro Inbox</h3><span class="card-desc">Messaggistica unificata</span></div>
+        </div>
+        <p>Rispondi ai tuoi ospiti su WhatsApp, Airbnb e Booking da un'unica app. Con IA, traduzioni automatiche e template.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro.apk" class="download-btn btn-android"><span class="btn-icon">🤖</span> Scarica Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx/builds/a312f28f-a4c3-4fd6-b5f9-5dd95b60d95e" class="download-btn btn-ios"><span class="btn-icon">🍎</span> Scarica iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-clean">🧹</div>
+          <div><h3>PmsKitPro Pulizia</h3><span class="card-desc">Gestione del team</span></div>
+        </div>
+        <p>App per il tuo team di pulizia. Servizi giornalieri, checklist con foto, timbratura GPS e controllo qualità con IA.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza-android"><span class="btn-icon">🤖</span> Scarica Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx-cleaner/builds/9b8c3ad6-38a7-4ee7-a8a2-d0b9c9ffa2d0" class="download-btn btn-limpieza-ios"><span class="btn-icon">🍎</span> Scarica iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="steps">
+        <strong>📱 Android:</strong> Scarica → Apri → Accetta installazione → Login<br>
+        <strong>🍎 iPhone:</strong> Apri link → Installa profilo → Attiva Modalità Sviluppatore (Impostazioni > Privacy > Modalità Sviluppatore)
+      </div>
+      <div class="footer">© 2026 PmsKitPro · <a href="https://pmskitpro.com">pmskitpro.com</a></div>
     </div>
 
-    <div class="footer">
-      © 2026 PmsKitPro · <a href="https://pmskitpro.com">pmskitpro.com</a>
+    <!-- ==================== PORTUGUÊS ==================== -->
+    <div data-lang="pt">
+      <div class="hero">
+        <div class="hero-badge">🚀 Software para alojamento turístico</div>
+        <h1>Gerencie suas propriedades de férias com <span>Inteligência Artificial</span></h1>
+        <p>Automatize respostas aos hóspedes, gerencie reservas de múltiplas plataformas, controle sua equipe de limpeza e maximize sua receita.</p>
+        <div class="hero-features">
+          <span class="hero-feat">💬 WhatsApp + IA</span>
+          <span class="hero-feat">🏠 Airbnb</span>
+          <span class="hero-feat">🔵 Booking</span>
+          <span class="hero-feat">🧹 Limpeza</span>
+          <span class="hero-feat">📊 Dashboard</span>
+          <span class="hero-feat">🌍 Multi-idioma</span>
+        </div>
+        <a href="https://pmskitpro.com" class="hero-cta">Descubra PmsKitPro →</a>
+      </div>
+      <div class="header">
+        <div class="logo">PKP</div>
+        <h2>Baixe os Apps</h2>
+        <p class="header-sub">Para clientes com conta ativa</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-inbox">📱</div>
+          <div><h3>PmsKitPro Inbox</h3><span class="card-desc">Mensagens unificadas</span></div>
+        </div>
+        <p>Responda seus hóspedes no WhatsApp, Airbnb e Booking de um só app. Com IA, traduções automáticas e templates.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro.apk" class="download-btn btn-android"><span class="btn-icon">🤖</span> Baixar Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx/builds/a312f28f-a4c3-4fd6-b5f9-5dd95b60d95e" class="download-btn btn-ios"><span class="btn-icon">🍎</span> Baixar iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon card-icon-clean">🧹</div>
+          <div><h3>PmsKitPro Limpeza</h3><span class="card-desc">Gestão de equipe</span></div>
+        </div>
+        <p>App para sua equipe de limpeza. Serviços do dia, checklists com fotos, ponto GPS e controle de qualidade com IA.</p>
+        <a href="https://github.com/adriangascasancho/pmskitpro-downloads/raw/main/PmsKitPro-Limpieza.apk" class="download-btn btn-limpieza-android"><span class="btn-icon">🤖</span> Baixar Android</a>
+        <a href="https://expo.dev/accounts/agauticjatbnb/projects/autochat-pmsx-cleaner/builds/9b8c3ad6-38a7-4ee7-a8a2-d0b9c9ffa2d0" class="download-btn btn-limpieza-ios"><span class="btn-icon">🍎</span> Baixar iPhone (Beta)</a>
+        <div class="platforms"><span class="platform-badge">Android 8.0+</span><span class="platform-badge">iOS 15+</span></div>
+      </div>
+      <div class="steps">
+        <strong>📱 Android:</strong> Baixe → Abra → Aceite instalação → Login<br>
+        <strong>🍎 iPhone:</strong> Abra o link → Instale o perfil → Ative Modo Desenvolvedor (Ajustes > Privacidade > Modo Desenvolvedor)
+      </div>
+      <div class="footer">© 2026 PmsKitPro · <a href="https://pmskitpro.com">pmskitpro.com</a></div>
     </div>
   </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      document.querySelector('[data-lang="'+lang+'"]').classList.add('active');
+      document.getElementById('btn-'+lang).classList.add('active');
+      localStorage.setItem('pkp-lang', lang);
+    }
+    // Auto-detect language
+    const saved = localStorage.getItem('pkp-lang');
+    if (saved) { setLang(saved); }
+    else {
+      const bl = navigator.language.substring(0,2);
+      if (['es','en','it','pt'].includes(bl)) setLang(bl);
+    }
+  </script>
 </body>
 </html>
